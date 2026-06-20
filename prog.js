@@ -1,19 +1,32 @@
-function calculator(operation){
-    console.log("Calculating");
-    console.log(operation)
-    console.log(operation(4,2))
-    return "Sucessfully performed the operations"
+let a = 10
+var b = 20;
+const c = 200;
+function test(){
+    console.log("------Function scope---------")
+    var city = "Pune"
+    let country = "India"
+    const pincode = 12345
+    console.log(city)
+    console.log(pincode)
+    console.log(country)
 }
 
-function add(num1, num2){
-    console.log("Addition:-")
-    return num1 + num2;
-}
 
-function sub(num1,num2){
-    console.log("Substract: ")
-    return num1 - num2;
-}
+test()
+console.log("--------Global Scope-----------")
+console.log(a)
+console.log(b)
+console.log(c)
 
-console.log(calculator(add));
-console.log(calculator(sub))
+if(true){
+
+    console.log("-------Block scope----------")
+    let eid = 123
+    var ename = "Phone"
+    const price = 12000
+    console.log(eid)
+    console.log(ename)
+    console.log(price)
+}
+console.log("--------Var can access outside block scope-----------")
+console.log(ename)
